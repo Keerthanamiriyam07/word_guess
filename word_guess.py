@@ -27,7 +27,7 @@ def play_game():
 
         # Check if guess is in the word
         if guess in secret_word:
-            print("✔️ Correct!")
+            print(" Correct!")
 
             # Reveal the guessed letter in the display
             for i in range(len(secret_word)):
@@ -35,7 +35,7 @@ def play_game():
                     display[i] = guess
 
         else:
-            print("❌ Wrong guess!")
+            print(" Wrong guess!")
             chances -= 1
             print("Chances left:", chances)
 
@@ -44,11 +44,11 @@ def play_game():
 
         # If user wins
         if "_" not in display:
-            print("\n🎉 Congratulations! You guessed the word:", secret_word)
+            print("\n Congratulations! You guessed the word:", secret_word)
             return  # End this round
 
     # If user loses
-    print("\n😢 Game Over! The correct word was:", secret_word)
+    print("\n Game Over! The correct word was:", secret_word)
 
 # Main loop to play again
 while True:
@@ -56,5 +56,6 @@ while True:
 
     again = input("\nDo you want to play again? (yes/no): ").lower()
     if again != "yes":
-        print("\n👋 Thanks for playing! See you next time!")
+        print("\n Thanks for playing! See you next time!")
         break
+
